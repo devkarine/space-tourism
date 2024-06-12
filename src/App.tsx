@@ -1,11 +1,11 @@
+import { Logo } from "./components/Logo"
 
 export const App = () => {
   
 
   return (
-    <>
-      <h1>Karine</h1>
-    </>
+    
+      <Logo/>
   )
 }
 
