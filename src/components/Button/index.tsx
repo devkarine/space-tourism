@@ -2,12 +2,11 @@ import { ButtonHTMLAttributes, ReactNode } from 'react'
 import * as S from './styled'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
-    size: 'small' | 'large',
     children?: ReactNode
 }
-export const Button = ({children, size, ...props}: ButtonProps) =>{
+export const Button = ({children, ...props}: ButtonProps) =>{
     return (
-    <S.ButtonContainer size={size} {...props}>
+    <S.ButtonContainer {...props}>
       {children}
     </S.ButtonContainer>
     )
