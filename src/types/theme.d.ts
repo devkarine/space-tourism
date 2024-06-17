@@ -18,6 +18,14 @@ declare module 'styled-components' {
       primary: string;
       secondary: string;
       light: string;
+
+      neutral: {
+        400: string,
+        500: string,
+        600: string,
+        700: string,
+        800: string,
+      }
     };
     fonts: {
       family: {
