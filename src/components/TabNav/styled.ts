@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const TabNav = styled.a`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   font-family: ${({ theme }) => theme.fonts.family.secondary};
-  font-size: ${({ theme }) => theme.fonts.size.header.extraSmall};
+  font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
   color: ${({ theme }) => theme.colors.light};
-  width: 97px;
+  background-color: transparent;
+  width: 100px;
   height: 96px;
   cursor: pointer;
 
