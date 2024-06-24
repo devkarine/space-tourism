@@ -2,13 +2,15 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 1440px;
+  max-width: 1560px;
+
   margin: 0 auto;
   height: 136px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-left: 64px;
+  gap: 20px;
 `;
 
 export const TabContainer = styled.div`
@@ -28,10 +30,14 @@ export const TabContainer = styled.div`
   }
 `;
 
-export const DetailHeader = styled.div`
-  width: 485px;
-  border: 0.5px solid #979797;
-  margin-left: 100px;
-  position: absolute;
-  z-index: 99999;
-`;
+// export const DetailHeader = styled.div`
+//   min-width: 485px;
+//   border: 0.5px solid #979797;
+//   margin-left: 100px;
+//   position: absolute;
+//   z-index: 99999;
+
+//   @media (max-width: 1360px) {
+//     display:  none;
+//   }
+// `;

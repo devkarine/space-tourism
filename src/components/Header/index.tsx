@@ -6,7 +6,7 @@ export const Header = () => {
     return(
         <S.Container>
             <Logo/>
-             <S.DetailHeader></S.DetailHeader>
+            {/* <S.DetailHeader></S.DetailHeader> */}
             <S.TabContainer>
                 <TabNav href="#"><span>00</span>HOME</TabNav>
                 <TabNav href="#"><span>01</span>DESTINATION</TabNav>
@@ -17,3 +17,5 @@ export const Header = () => {
         </S.Container>
     )
 }
+
+//TODO voltar e arrumar os DetailHeader

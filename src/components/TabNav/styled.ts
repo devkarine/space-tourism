@@ -21,5 +21,4 @@ export const TabNav = styled.a`
     border-bottom: 3px solid white;
   }
 
-  //TODO Resolver o focus que não está funcionando
 `;
