@@ -1,24 +1,33 @@
 import styled from 'styled-components';
 
-export const TabNav = styled.a`
+interface TabNavProps {
+  href: string;
+  borderDirection: 'bottom' | 'right';
+}
+
+export const TabNav = styled.button<TabNavProps>`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
   font-family: ${({ theme }) => theme.fonts.family.secondary};
   font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
   color: ${({ theme }) => theme.colors.light};
   background-color: transparent;
-  width: 100px;
-  height: 96px;
   cursor: pointer;
 
   &:hover {
-    border-bottom: 3px solid #85868b;
+    ${({ borderDirection }) =>
+      borderDirection === 'bottom'
+        ? 
+        'border-bottom: 3px solid #85868b;'
+        : 
+        'border-right: 3px solid #85868b;'}
   }
 
   &:focus {
-    border-bottom: 3px solid white;
+    ${({ borderDirection }) =>
+      borderDirection === 'bottom'
+        ? 'border-bottom: 3px solid white;'
+        : 'border-right: 3px solid white;'}
   }
-
 `;

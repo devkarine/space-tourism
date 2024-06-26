@@ -8,12 +8,15 @@ export const modalStyles = {
     height: '100%',
     marginRight: 0,
     transform: 'none',
-    backgroundColor: 'rgba(11,13,23,0.15)',
+    backgroundColor: 'rgba(11, 13, 23, 0.15)',
     border: 'none',
     overflowY: 'auto' as const,
-    padding: '10px'
+    padding: '10px',
+    backdropFilter: 'blur(10px)', 
+    WebkitBackdropFilter: 'blur(10px)' 
   },
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.4)'
   }
 };
+
