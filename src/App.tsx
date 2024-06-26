@@ -1,11 +1,9 @@
-import { Logo } from "./components/Logo"
+import { Home } from "./Pages/Home";
+
+
 
 export const App = () => {
-  
-
-  return (
-    
-      <Logo/>
-  )
-}
-
+  return <>
+    <Home/>
+  </>;
+};
