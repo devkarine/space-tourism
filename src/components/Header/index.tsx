@@ -28,6 +28,7 @@ export const Header = () => {
           <TabNav href="#" borderDirection="bottom">
             <span>00</span>HOME
           </TabNav>
+
           <TabNav href="#" borderDirection="bottom">
             <span>01</span>DESTINATION
           </TabNav>

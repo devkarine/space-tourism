@@ -1,9 +1,9 @@
-import { Home } from "./Pages/Home";
-
-
+import { SpaceTourismRoutes } from './Routes/routes';
 
 export const App = () => {
-  return <>
-    <Home/>
-  </>;
+  return (
+    <>
+      <SpaceTourismRoutes />
+    </>
+  );
 };
