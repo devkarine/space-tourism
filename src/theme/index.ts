@@ -32,7 +32,7 @@ export const theme: DefaultTheme = {
             small: '32px',
             medium: '58px',
             large: '100px',
-            extraLarge: '144px'
+            extraLarge: '150px'
           },
 
     },
