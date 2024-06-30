@@ -21,13 +21,6 @@ export const GlobalStyle = createGlobalStyle`
     color: #ffffff;
   }
 
-  /* .container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 3.125rem;
-  } */
-  
   button {
     cursor: pointer;
     border: none;
