@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 interface TabNavProps {
-  href: string;
+  to: string;
   borderDirection: 'bottom' | 'right';
 }
 
-export const TabNav = styled.button<TabNavProps>`
+export const TabNav = styled(Link)<TabNavProps>`
   display: flex;
   align-items: center;
   gap: 12px;

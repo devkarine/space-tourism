@@ -3,14 +3,14 @@ import * as S from './styled';
 
 interface TabProps{
     children: React.ReactNode
-    href: string
+    to: string
     borderDirection: 'bottom' | 'right'
 }
 
 
-export const TabNav = ({children , href, borderDirection}: TabProps) => {
+export const TabNav = ({children , to, borderDirection}: TabProps) => {
     return(
-        <S.TabNav href={href} borderDirection={borderDirection}>
+        <S.TabNav to={to} borderDirection={borderDirection}>
             {children}
         </S.TabNav>
     )

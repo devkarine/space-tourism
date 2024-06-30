@@ -25,32 +25,32 @@ export const Header = () => {
       {/* <S.DetailHeader/> */}
       {windowWidth > 768 ? (
         <S.TabContainer>
-          <TabNav href="#" borderDirection="bottom">
+          <TabNav  to="/home" borderDirection="bottom">
             <span>00</span>HOME
           </TabNav>
 
-          <TabNav href="#" borderDirection="bottom">
+          <TabNav to="/destination" borderDirection="bottom">
             <span>01</span>DESTINATION
           </TabNav>
-          <TabNav href="#" borderDirection="bottom">
+          <TabNav to="#" borderDirection="bottom">
             <span>02</span>CREW
           </TabNav>
-          <TabNav href="#" borderDirection="bottom">
+          <TabNav to="#" borderDirection="bottom">
             <span>03</span>TECHNOLOGY
           </TabNav>
         </S.TabContainer>
       ) : (
         <ModalContent>
-          <TabNav href="#" borderDirection="right">
+          <TabNav to="#" borderDirection="right">
             <span>00</span>HOME
           </TabNav>
-          <TabNav href="#" borderDirection="right">
+          <TabNav to="#" borderDirection="right">
             <span>01</span>DESTINATION
           </TabNav>
-          <TabNav href="#" borderDirection="right">
+          <TabNav to="#" borderDirection="right">
             <span>02</span>CREW
           </TabNav>
-          <TabNav href="#" borderDirection="right">
+          <TabNav to="#" borderDirection="right">
             <span>03</span>TECHNOLOGY
           </TabNav>
         </ModalContent>
