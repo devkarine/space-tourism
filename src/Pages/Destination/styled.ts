@@ -13,3 +13,8 @@ export const Container = styled.div`
     background-image: url('/assets/destination/background-destination-tablet.jpg');
   }
 `;
+
+export const DestinationContent = styled.section`
+    display: flex;
+    gap: 32px;
+`

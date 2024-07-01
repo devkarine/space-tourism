@@ -1,4 +1,5 @@
 import { Header } from '../../components/Header';
+import { ImgDestination } from '../../components/ImgDestination';
 import { TabNav } from '../../components/TabNav';
 import { Title } from '../../components/Title';
 import * as S from './styled';
@@ -9,13 +10,12 @@ export const Destination = () => {
       <Header />
       <Title  position={"01"} text={"PICK YOUR DESTINATION"}/>
 
-      <section>
+      <S.DestinationContent>
+        <ImgDestination src={'/assets/destination/image-moon.png'} alt={"Lua"}/>
+
         <section>
-          <img src="" alt="" />
-        </section>
-        <section>
-          <div>
-            <TabNav to="/" borderDirection={'bottom'}>
+          <nav>
+            <TabNav to="/moon" borderDirection={'bottom'}>
               Moon
             </TabNav>
             <TabNav to="/" borderDirection={'bottom'}>
@@ -27,7 +27,7 @@ export const Destination = () => {
             <TabNav to="/" borderDirection={'bottom'}>
               Titans
             </TabNav>
-          </div>
+          </nav>
           <div>
             <h1></h1>
             <p></p>
@@ -43,7 +43,7 @@ export const Destination = () => {
             </div>
           </div>
         </section>
-      </section>
+      </S.DestinationContent>
     </S.Container>
   );
 };
