@@ -41,12 +41,8 @@ export const HomeIntro = styled.div`
   }
 
   h1 {
-    font-family: ${({ theme }) => theme.fonts.family.primary};
-    font-size: ${({ theme }) => theme.fonts.size.header.extraLarge};
 
-    @media (max-width: 768px) {
-      font-size: ${({ theme }) => theme.fonts.size.header.large};
-    }
+    
   }
 
   p {

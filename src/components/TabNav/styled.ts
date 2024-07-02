@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 interface TabNavProps {
   to: string;
   borderDirection: 'bottom' | 'right';
+  onTabClick?: () => void
 }
 
 export const TabNav = styled(Link)<TabNavProps>`
@@ -15,20 +16,16 @@ export const TabNav = styled(Link)<TabNavProps>`
   color: ${({ theme }) => theme.colors.light};
   background-color: transparent;
   cursor: pointer;
+  border-bottom: ${({ borderDirection }) =>
+    borderDirection === 'bottom' ? '3px solid transparent' : 'none'};
+  border-right: ${({ borderDirection }) =>
+    borderDirection === 'right' ? '3px solid transparent' : 'none'};
 
   &:hover {
-    ${({ borderDirection }) =>
-      borderDirection === 'bottom'
-        ? 
-        'border-bottom: 3px solid #85868b;'
-        : 
-        'border-right: 3px solid #85868b;'}
+    border-color: #85868b;
   }
 
   &:focus {
-    ${({ borderDirection }) =>
-      borderDirection === 'bottom'
-        ? 'border-bottom: 3px solid white;'
-        : 'border-right: 3px solid white;'}
+    border-color: white;
   }
 `;

@@ -1,5 +1,6 @@
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
+import { Title } from '../../components/Title';
 import * as S from './styled';
 
 export const Home = () => {
@@ -9,7 +10,7 @@ export const Home = () => {
       <S.HomeContent>
         <S.HomeIntro>
           <span>SO, YOU WANT TO TRAVEL TO</span>
-          <h1>SPACE</h1>
+          <Title text={"SPACE"} variant={'primary'}/>
 
           <p>
             Let’s face it; if you want to go to space, you might as well

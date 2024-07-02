@@ -5,12 +5,10 @@ import { Destination } from '../Pages/Destination';
 export const SpaceTourismRoutes = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<Navigate replace to="/home" />} />
+       <Routes>
+        <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/destination" element={<Destination />}>
-          {/* <Route path="/moon" element={<Home />} /> */}
-        </Route>
+        <Route path="/destination/*" element={<Destination />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,11 +1,31 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const Title = styled.h2`
-    font-family: ${({theme})=> theme.fonts.family.secondary};
-    font-size: ${({theme})=> theme.fonts.size.header.extraSmall};
+interface TitleStyleProps {
+  $variant: 'primary' | 'secondary';
+}
 
-    span{
-        padding-right: 10px;
-        color: #4d4f56;
+export const Title = styled.h2<TitleStyleProps>`
+  ${({ $variant, theme }) =>
+    $variant === 'primary'
+      ? `
+      font-family: ${theme.fonts.family.primary};
+      font-size: ${theme.fonts.size.header.large};
+
+      @media (max-width: 768px) {
+      font-size: ${theme.fonts.size.header.medium};
     }
-`
+        
+      `
+      : `
+
+      font-family: ${theme.fonts.family.secondary};
+      font-size: ${theme.fonts.size.header.extraSmall};
+
+        
+      `}
+
+  span {
+    padding-right: 10px;
+    color: #4d4f56;
+  }
+`;

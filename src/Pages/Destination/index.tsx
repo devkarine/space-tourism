@@ -1,49 +1,63 @@
-import { Header } from '../../components/Header';
-import { ImgDestination } from '../../components/ImgDestination';
-import { TabNav } from '../../components/TabNav';
-import { Title } from '../../components/Title';
+import  { useState, useEffect} from 'react';
 import * as S from './styled';
+import { ImgDestination } from '../../components/ImgDestination';
+import { TabNavDestination } from '../../components/TabNav/TabNavDestination';
+import { Title } from '../../components/Title';
+import destinationsData from './destinations.json';
+import { Header } from '../../components/Header';
+
+
+
+interface DestinationData {
+  image: string;
+  title: string;
+  description: string;
+  distance: string;
+  travelTime: string;
+}
 
 export const Destination = () => {
+  const [selectedDestination, setSelectedDestination] = useState('moon');
+  const [destinations, setDestinations] = useState<{ [key: string]: DestinationData }>({});
+
+  useEffect(() => {
+    setDestinations(destinationsData);
+  }, []);
+
+  const handleTabClick = (destination: string) => {
+    setSelectedDestination(destination);
+  };
+
+  const destination = destinations[selectedDestination];
+
   return (
-    <S.Container>
+    <S.DestinationContent>
       <Header />
-      <Title  position={"01"} text={"PICK YOUR DESTINATION"}/>
+      <Title position="01" text="PICK YOUR DESTINATION" variant="secondary" />
+      {destination && (
+        <S.MainContent>
+          <ImgDestination src={destination.image} alt={destination.title} />
 
-      <S.DestinationContent>
-        <ImgDestination src={'/assets/destination/image-moon.png'} alt={"Lua"}/>
+          <section>
+            <TabNavDestination onTabClick={handleTabClick} />
 
-        <section>
-          <nav>
-            <TabNav to="/moon" borderDirection={'bottom'}>
-              Moon
-            </TabNav>
-            <TabNav to="/" borderDirection={'bottom'}>
-              Mars
-            </TabNav>
-            <TabNav to="/" borderDirection={'bottom'}>
-              Europa
-            </TabNav>
-            <TabNav to="/" borderDirection={'bottom'}>
-              Titans
-            </TabNav>
-          </nav>
-          <div>
-            <h1></h1>
-            <p></p>
             <div>
+              <Title text={destination.title} variant="primary" />
+              <p>{destination.description}</p>
               <div>
-                <p></p>
-                <p></p>
-              </div>
-              <div>
-                <p></p>
-                <p></p>
+                <div>
+                  <p>AVG. DISTANCE</p>
+                  <p>{destination.distance}</p>
+                </div>
+                <div>
+                  <p>Est. travel time</p>
+                  <p>{destination.travelTime}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-      </S.DestinationContent>
-    </S.Container>
+          </section>
+        </S.MainContent>
+      )}
+    </S.DestinationContent>
   );
 };

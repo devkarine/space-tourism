@@ -1,13 +1,14 @@
 import * as S from './styled';
 
 interface TitleProps {
-  position: string;
+  position?: string;
   text: string;
+  variant: 'primary' | 'secondary'
 }
 
-export const Title = ({ position, text }: TitleProps) => {
+export const Title = ({ position, text, variant }: TitleProps) => {
   return (
-    <S.Title>
+    <S.Title $variant={variant}>
       <span>{position}</span>
       {text}
     </S.Title>

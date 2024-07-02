@@ -14,7 +14,13 @@ export const Container = styled.div`
   }
 `;
 
-export const DestinationContent = styled.section`
-    display: flex;
-    gap: 32px;
-`
+export const DestinationContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+`;
+
+export const MainContent = styled.div`
+  display: flex;
+  gap: 32px;
+`;
