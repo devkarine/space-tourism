@@ -5,6 +5,8 @@ interface TitleStyleProps {
 }
 
 export const Title = styled.h2<TitleStyleProps>`
+
+
   ${({ $variant, theme }) =>
     $variant === 'primary'
       ? `
@@ -13,6 +15,7 @@ export const Title = styled.h2<TitleStyleProps>`
 
       @media (max-width: 768px) {
       font-size: ${theme.fonts.size.header.medium};
+      
     }
         
       `
@@ -20,6 +23,13 @@ export const Title = styled.h2<TitleStyleProps>`
 
       font-family: ${theme.fonts.family.secondary};
       font-size: ${theme.fonts.size.header.extraSmall};
+      max-width: 357px ;
+      text-align: center;
+
+      @media (max-width: 768px) {
+      font-size: ${theme.fonts.size.text.small};
+      
+    }
 
         
       `}
@@ -27,5 +37,6 @@ export const Title = styled.h2<TitleStyleProps>`
   span {
     padding-right: 10px;
     color: #4d4f56;
+    
   }
 `;

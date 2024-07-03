@@ -1,12 +1,10 @@
-import  { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import * as S from './styled';
 import { ImgDestination } from '../../components/ImgDestination';
 import { TabNavDestination } from '../../components/TabNav/TabNavDestination';
 import { Title } from '../../components/Title';
 import destinationsData from './destinations.json';
 import { Header } from '../../components/Header';
-
-
 
 interface DestinationData {
   image: string;
@@ -18,7 +16,9 @@ interface DestinationData {
 
 export const Destination = () => {
   const [selectedDestination, setSelectedDestination] = useState('moon');
-  const [destinations, setDestinations] = useState<{ [key: string]: DestinationData }>({});
+  const [destinations, setDestinations] = useState<{
+    [key: string]: DestinationData;
+  }>({});
 
   useEffect(() => {
     setDestinations(destinationsData);
@@ -31,33 +31,37 @@ export const Destination = () => {
   const destination = destinations[selectedDestination];
 
   return (
-    <S.DestinationContent>
+    <S.Container>
       <Header />
-      <Title position="01" text="PICK YOUR DESTINATION" variant="secondary" />
-      {destination && (
-        <S.MainContent>
-          <ImgDestination src={destination.image} alt={destination.title} />
+      <S.DestinationContent>
+        <Title position="01" text="PICK YOUR DESTINATION" variant="secondary" />
+        {destination && (
+          <S.MainContent>
+            <section>
+              <ImgDestination src={destination.image} alt={destination.title} />
+            </section>
 
-          <section>
-            <TabNavDestination onTabClick={handleTabClick} />
+            <section>
+              <TabNavDestination onTabClick={handleTabClick} />
 
-            <div>
-              <Title text={destination.title} variant="primary" />
-              <p>{destination.description}</p>
-              <div>
-                <div>
-                  <p>AVG. DISTANCE</p>
-                  <p>{destination.distance}</p>
-                </div>
-                <div>
-                  <p>Est. travel time</p>
-                  <p>{destination.travelTime}</p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </S.MainContent>
-      )}
-    </S.DestinationContent>
+              <S.WrapperDestinations>
+                <Title text={destination.title} variant="primary" />
+                <S.DestinationDescription>{destination.description}</S.DestinationDescription>
+                <S.Distance>
+                  <div>
+                    <p>AVG. DISTANCE</p>
+                    <span>{destination.distance}</span>
+                  </div>
+                  <div>
+                    <p>Est. travel time</p>
+                    <span>{destination.travelTime}</span>
+                  </div>
+                </S.Distance>
+              </S.WrapperDestinations>
+            </section>
+          </S.MainContent>
+        )}
+      </S.DestinationContent>
+    </S.Container>
   );
 };
