@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Button } from '../../components/Button';
 import { Header } from '../../components/Header';
 import { Title } from '../../components/Title';
@@ -20,7 +21,9 @@ export const Home = () => {
           </p>
         </S.HomeIntro>
         <S.ButtonContent>
-          <Button>EXPLORER</Button>
+          <Button>
+            <Link to={'/destination'}>EXPLORER</Link>
+          </Button>
         </S.ButtonContent>
       </S.HomeContent>
     </S.Container>
