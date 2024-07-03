@@ -41,10 +41,10 @@ export const Header = () => {
         </S.TabContainer>
       ) : (
         <ModalContent>
-          <TabNav to="#" borderDirection="right">
+          <TabNav to="/home"  borderDirection="right">
             <span>00</span>HOME
           </TabNav>
-          <TabNav to="#" borderDirection="right">
+          <TabNav to="/destination"  borderDirection="right">
             <span>01</span>DESTINATION
           </TabNav>
           <TabNav to="#" borderDirection="right">
