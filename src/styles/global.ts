@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   * {
@@ -26,12 +26,14 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     background-color: inherit;
   }
+
   a {
-    text-decoration: none;
-    
+    text-decoration: none; 
   }
+
+
   ul {
     list-style-type: none;
   }
   
-`
+`;

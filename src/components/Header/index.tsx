@@ -32,7 +32,7 @@ export const Header = () => {
           <TabNav to="/destination" borderDirection="bottom">
             <span>01</span>DESTINATION
           </TabNav>
-          <TabNav to="#" borderDirection="bottom">
+          <TabNav to="/crew" borderDirection="bottom">
             <span>02</span>CREW
           </TabNav>
           <TabNav to="#" borderDirection="bottom">
@@ -47,7 +47,7 @@ export const Header = () => {
           <TabNav to="/destination"  borderDirection="right">
             <span>01</span>DESTINATION
           </TabNav>
-          <TabNav to="#" borderDirection="right">
+          <TabNav to="/crew" borderDirection="right">
             <span>02</span>CREW
           </TabNav>
           <TabNav to="#" borderDirection="right">

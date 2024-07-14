@@ -7,6 +7,7 @@ export const ButtonContainer = styled.button`
   color: ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.light};
   border-radius: 50%;
+  transition: ease-in-out 3s;
 
   &:hover {
     box-shadow: 0 0 0 50px rgba(255, 255, 255, 10%);
