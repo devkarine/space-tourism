@@ -24,7 +24,7 @@ export const Title = styled.h2<TitleStyleProps>`
       font-family: ${theme.fonts.family.secondary};
       font-size: ${theme.fonts.size.header.extraSmall};
       max-width: 357px ;
-      text-align: center;
+      
 
       @media (max-width: 768px) {
       font-size: ${theme.fonts.size.text.small};
