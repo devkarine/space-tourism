@@ -35,5 +35,10 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style-type: none;
   }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
   
 `;
