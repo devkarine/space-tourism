@@ -35,7 +35,7 @@ export const Header = () => {
           <TabNav to="/crew" borderDirection="bottom">
             <span>02</span>CREW
           </TabNav>
-          <TabNav to="#" borderDirection="bottom">
+          <TabNav to="/technology" borderDirection="bottom">
             <span>03</span>TECHNOLOGY
           </TabNav>
         </S.TabContainer>
@@ -50,7 +50,7 @@ export const Header = () => {
           <TabNav to="/crew" borderDirection="right">
             <span>02</span>CREW
           </TabNav>
-          <TabNav to="#" borderDirection="right">
+          <TabNav to="/technology" borderDirection="right">
             <span>03</span>TECHNOLOGY
           </TabNav>
         </ModalContent>
