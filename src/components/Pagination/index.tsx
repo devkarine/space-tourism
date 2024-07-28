@@ -5,18 +5,21 @@ export interface PaginationProps {
   size: 'small' | 'large';
   isSelected: boolean;
   onClick: () => void;
+  index?: number
 }
 
-export const Pagination = ({ variant, size, isSelected, onClick }: PaginationProps) => {
+export const Pagination = ({ variant, size, isSelected, onClick, index }: PaginationProps) => {
   return (
     <S.PaginationContainer
-      size={size}
-      $variant={variant}
-      onClick={onClick}
-      style={{
-        background: isSelected ? '#FFFFFF' : '',
-        color: isSelected ? '#0B0D17' : ''
-      }}
-    />
+    size={size}
+    $variant={variant}
+    onClick={onClick}
+    style={{
+      background: isSelected ? '#FFFFFF' : '',
+      color: isSelected ? '#0B0D17' : ''
+    }}
+  >
+    {index} 
+  </S.PaginationContainer>
   );
 };
