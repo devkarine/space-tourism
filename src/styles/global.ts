@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     line-height: 1.5;
     font-family: ${({ theme }) => theme.fonts.family.primary};
-    font-weight: ${({ theme }) => theme.fonts.weight.regular} ;
+    font-weight: 400 ;
   }
 
 
@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     background-color: ${({ theme }) => theme.colors.primary};
-    color: #ffffff;
+    color: ${({ theme }) => theme.colors.light};
   }
 
   button {

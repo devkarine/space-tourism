@@ -49,14 +49,14 @@ export const WrapperCrew = styled.div`
 `;
 
 export const RoleCrew = styled.h3`
-  font-size: 32px;
+  font-size: ${({ theme }) => theme.fonts.size.header.small};
   font-weight: lighter;
   height: 37px;
   margin: 24px 0;
 `;
 
 export const NameCrew = styled.h2`
-  font-size: 56px;
+  font-size: ${({ theme }) => theme.fonts.size.header.medium};
   height: 143px;
   font-weight: lighter;
   width: 539px;
@@ -64,7 +64,7 @@ export const NameCrew = styled.h2`
 `;
 
 export const DescriptionCrew = styled.p`
-  font-size: 18px;
+  font-size: ${({ theme }) => theme.fonts.size.text.small};
   font-family: ${({ theme }) => theme.fonts.family.tertiary};
   font-weight: lighter;
 `;

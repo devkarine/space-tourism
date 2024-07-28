@@ -19,10 +19,9 @@ export const TabContainer = styled.div`
   gap: 48px;
   width: 736px;
   height: 96px;
-  background: rgba(255, 255, 255, 0.1);
+  background: ${({ theme }) => theme.colors.neutral[900]};
   backdrop-filter: blur(10px);
   padding: 0 64px;
-  
 
   span {
     font-family: ${({ theme }) => theme.fonts.family.secondary};
@@ -37,8 +36,6 @@ export const TabContainer = styled.div`
 //   position: absolute;
 //   z-index: 99999;
 //   margin-left: 100px;
-
-
 
 //   @media (max-width: 768px) {
 //     display:  none;

@@ -5,8 +5,6 @@ interface TitleStyleProps {
 }
 
 export const Title = styled.h2<TitleStyleProps>`
-
-
   ${({ $variant, theme }) =>
     $variant === 'primary'
       ? `
@@ -36,7 +34,6 @@ export const Title = styled.h2<TitleStyleProps>`
 
   span {
     padding-right: 10px;
-    color: #4d4f56;
-    
+    color: ${({ theme }) => theme.colors.neutral[600]};
   }
 `;

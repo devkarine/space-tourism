@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 interface TabNavProps {
   to: string;
   borderDirection: 'bottom' | 'right';
-  onTabClick?: () => void
+  onTabClick?: () => void;
 }
 
 export const TabNav = styled(Link)<TabNavProps>`
@@ -22,10 +22,10 @@ export const TabNav = styled(Link)<TabNavProps>`
     borderDirection === 'right' ? '3px solid transparent' : 'none'};
 
   &:hover {
-    border-color: #85868b;
+    border-color: ${({ theme }) => theme.colors.neutral[500]};
   }
 
   &:focus {
-    border-color: white;
+    border-color: ${({ theme }) => theme.colors.light};
   }
 `;

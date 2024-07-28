@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled } from 'styled-components';
 
 export const Container = styled.div`
   background-image: url('/assets/destination/background-destination-desktop.jpg');
@@ -26,7 +26,6 @@ export const MainContent = styled.div`
   @media (max-width: 930px) {
     flex-direction: column;
     text-align: center;
-    
   }
 `;
 
@@ -38,44 +37,39 @@ export const DestinationContent = styled.div`
 
   @media (max-width: 768px) {
     padding: 0 50px;
-    
   }
 `;
 
 export const WrapperDestinations = styled.div`
   display: flex;
   flex-direction: column;
-  
 `;
 
 export const DestinationDescription = styled.p`
-padding-bottom: 40px;
-border-bottom: 0.5px solid #979797;
+  padding-bottom: 40px;
+  border-bottom: 0.5px solid ${({ theme }) => theme.colors.neutral[500]};
 `;
 
 export const Distance = styled.div`
   display: flex;
   gap: 100px;
   padding-top: 40px;
- 
 
-  p{
-    font-family: ${({theme})=>theme.fonts.family.secondary};
-    font-size: ${({theme})=>theme.fonts.size.text.extraSmall};
+  p {
+    font-family: ${({ theme }) => theme.fonts.family.secondary};
+    font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
   }
 
-  span{
-    font-family: ${({theme})=>theme.fonts.family.primary};
-    font-size: ${({theme})=>theme.fonts.size.header.extraSmall};
-    color: white;
+  span {
+    font-family: ${({ theme }) => theme.fonts.family.primary};
+    font-size: ${({ theme }) => theme.fonts.size.header.extraSmall};
+    color: ${({ theme }) => theme.colors.light};
   }
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:30px;
-    
+    gap: 30px;
   }
 `;
-

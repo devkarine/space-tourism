@@ -6,14 +6,14 @@ export const theme: DefaultTheme = {
     primary: '#0B0D17',
     secondary: '#D0D6F9',
 
-    neutral:{
+    neutral: {
       400: '#a3a3a3',
-      500: '#737373',
-      600:'#525252',
+      500: '#949599',
+      600: '#525252',
       700: '#404040',
-      800: '#262626'
+      800: '#262626',
+      900: 'rgba(255, 255, 255, 10%)'
     }
-
   },
 
   fonts: {
@@ -23,21 +23,18 @@ export const theme: DefaultTheme = {
       tertiary: 'Barlow'
     },
     size: {
-        text: {
-            extraSmall: '16px',
-            small: '18px'
-          },
-        header: {
-            extraSmall: '28px',
-            small: '32px',
-            medium: '58px',
-            large: '100px',
-            extraLarge: '150px'
-          },
-
-    },
-    weight: {
-      regular: 400
+      text: {
+        extraSmall: '16px',
+        small: '18px',
+        medium: '24px'
+      },
+      header: {
+        extraSmall: '28px',
+        small: '32px',
+        medium: '58px',
+        large: '100px',
+        extraLarge: '150px'
+      }
     }
   }
 };

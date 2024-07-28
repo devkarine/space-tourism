@@ -5,14 +5,14 @@ export const CloseModal = styled.div`
   justify-content: flex-end;
 
   button {
-    color: ${({theme})=> theme.colors.light};
-    font-size: 24px;
+    color: ${({ theme }) => theme.colors.light};
+    font-size: ${({ theme }) => theme.fonts.size.text.medium};
   }
 `;
 
 export const OpenModal = styled.button`
-  color: ${({theme})=> theme.colors.light};
-  font-size: 24px;
+  color: ${({ theme }) => theme.colors.light};
+  font-size: ${({ theme }) => theme.fonts.size.text.medium};
   padding-right: 64px;
 `;
 
@@ -21,5 +21,4 @@ export const WrapperModal = styled.div`
   flex-direction: column;
   gap: 34px;
   justify-content: flex-start;
-  
-`
+`;

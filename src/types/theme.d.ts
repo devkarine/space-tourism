@@ -1,15 +1,11 @@
 import 'styled-components';
 
 type FontSize = {
-  extraSmall: string,
-  small: string,
-  medium?: string,
-  large?: string,
-  extraLarge?: string
-};
-
-type FontWeight = {
-  regular: number;
+  extraSmall: string;
+  small: string;
+  medium?: string;
+  large?: string;
+  extraLarge?: string;
 };
 
 declare module 'styled-components' {
@@ -20,12 +16,13 @@ declare module 'styled-components' {
       light: string;
 
       neutral: {
-        400: string,
-        500: string,
-        600: string,
-        700: string,
-        800: string,
-      }
+        400: string;
+        500: string;
+        600: string;
+        700: string;
+        800: string;
+        900: string;
+      };
     };
     fonts: {
       family: {
@@ -34,10 +31,9 @@ declare module 'styled-components' {
         tertiary: string;
       };
       size: {
-        text: FontSize,
-        header: FontSize
+        text: FontSize;
+        header: FontSize;
       };
-      weight: FontWeight;
     };
   }
 }

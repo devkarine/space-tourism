@@ -10,7 +10,7 @@ export const ButtonContainer = styled.button`
   transition: ease-in-out 3s;
 
   &:hover {
-    box-shadow: 0 0 0 50px rgba(255, 255, 255, 10%);
+    box-shadow: 0 0 0 50px ${({ theme }) => theme.colors.neutral[900]};
     transition: ease-in 0.5s;
   }
 
@@ -18,6 +18,6 @@ export const ButtonContainer = styled.button`
     width: 144px;
     height: 144px;
     font-size: ${({ theme }) => theme.fonts.size.text.small};
-    color: #949599;
+    color: ${({ theme }) => theme.colors.neutral[500]};
   }
 `;

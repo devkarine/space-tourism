@@ -37,18 +37,14 @@ export const HomeIntro = styled.div`
   span {
     font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: ${({ theme }) => theme.fonts.size.header.extraSmall};
-    font-weight: ${({ theme }) => theme.fonts.weight.regular};
   }
 
   h1 {
-
-    
   }
 
   p {
     font-family: ${({ theme }) => theme.fonts.family.tertiary};
     font-size: ${({ theme }) => theme.fonts.size.text.small};
-    font-weight: ${({ theme }) => theme.fonts.weight.regular};
 
     @media (max-width: 768px) {
       font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
