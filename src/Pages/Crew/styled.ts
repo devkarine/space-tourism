@@ -64,6 +64,7 @@ export const NameCrew = styled.h2`
   height: 143px;
   font-weight: 400;
   width: 539px;
+  margin-bottom: 24px;
 `;
 
 export const DescriptionCrew = styled.p`
