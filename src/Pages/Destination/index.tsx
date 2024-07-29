@@ -46,15 +46,17 @@ export const Destination = () => {
 
               <S.WrapperDestinations>
                 <Title text={destination.title} variant="primary" />
-                <S.DestinationDescription>{destination.description}</S.DestinationDescription>
+                <S.DestinationDescription>
+                  {destination.description}
+                </S.DestinationDescription>
                 <S.Distance>
                   <div>
                     <p>AVG. DISTANCE</p>
-                    <span>{destination.distance}</span>
+                    <span>{destination.distance.toLocaleUpperCase()}</span>
                   </div>
                   <div>
-                    <p>Est. travel time</p>
-                    <span>{destination.travelTime}</span>
+                    <p>EST. TRAVEL TIME</p>
+                    <span>{destination.travelTime.toLocaleUpperCase()}</span>
                   </div>
                 </S.Distance>
               </S.WrapperDestinations>

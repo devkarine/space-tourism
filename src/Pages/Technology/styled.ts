@@ -41,6 +41,26 @@ export const Main = styled.div`
 
 export const TechnologyContent = styled.div`
   width: 490px;
+
+  h2 {
+    font-size: ${({ theme }) => theme.fonts.size.header.small};
+    font-family: ${({ theme }) => theme.fonts.family.primary};
+    color: ${({ theme }) => theme.colors.neutral[500]};
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: ${({ theme }) => theme.fonts.size.header.medium};
+    font-family: ${({ theme }) => theme.fonts.family.primary};
+    color: ${({ theme }) => theme.colors.light};
+  }
+
+  p {
+    font-size: ${({ theme }) => theme.fonts.size.text.small};
+    font-family: ${({ theme }) => theme.fonts.family.tertiary};
+    color: ${({ theme }) => theme.colors.secondary};
+    line-height: 180%;
+  }
 `;
 
 export const PaginationContent = styled.div`

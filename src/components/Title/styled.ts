@@ -10,20 +10,19 @@ export const Title = styled.h2<TitleStyleProps>`
       ? `
       font-family: ${theme.fonts.family.primary};
       font-size: ${theme.fonts.size.header.large};
+      color: ${theme.colors.light};
 
       @media (max-width: 768px) {
       font-size: ${theme.fonts.size.header.medium};
-      
     }
-        
       `
       : `
-
       font-family: ${theme.fonts.family.secondary};
       font-size: ${theme.fonts.size.header.extraSmall};
+      color: ${theme.colors.light};
+      letter-spacing: 4px;
       max-width: 357px ;
       
-
       @media (max-width: 768px) {
       font-size: ${theme.fonts.size.text.small};
       
@@ -34,6 +33,10 @@ export const Title = styled.h2<TitleStyleProps>`
 
   span {
     padding-right: 10px;
+    font-weight: 700;
+    font-family: ${({ theme }) => theme.fonts.family.secondary};
+    font-size: ${({ theme }) => theme.fonts.size.header.extraSmall};
     color: ${({ theme }) => theme.colors.neutral[600]};
+    letter-spacing: 4.72px;
   }
 `;

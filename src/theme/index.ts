@@ -31,7 +31,7 @@ export const theme: DefaultTheme = {
       header: {
         extraSmall: '28px',
         small: '32px',
-        medium: '58px',
+        medium: '56px',
         large: '100px',
         extraLarge: '150px'
       }

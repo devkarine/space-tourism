@@ -35,15 +35,16 @@ export const HomeIntro = styled.div`
   max-width: 540px;
 
   span {
+    color: ${({ theme }) => theme.colors.secondary};
     font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: ${({ theme }) => theme.fonts.size.header.extraSmall};
-  }
-
-  h1 {
+    letter-spacing: 4px;
   }
 
   p {
     font-family: ${({ theme }) => theme.fonts.family.tertiary};
+    color: ${({ theme }) => theme.colors.secondary};
+    line-height: 180%;
     font-size: ${({ theme }) => theme.fonts.size.text.small};
 
     @media (max-width: 768px) {

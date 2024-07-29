@@ -1,4 +1,3 @@
-
 import { TabNav } from '../styled';
 import * as S from './styled';
 
@@ -9,17 +8,33 @@ interface TabNavDestinationProps {
 export const TabNavDestination = ({ onTabClick }: TabNavDestinationProps) => {
   return (
     <S.TabNavDestination>
-      <TabNav to="#" onClick={() => onTabClick('moon')} borderDirection="bottom">
-        Moon
+      <TabNav
+        to="#"
+        onClick={() => onTabClick('moon')}
+        borderDirection="bottom"
+      >
+        MOON
       </TabNav>
-      <TabNav to="#" onClick={() => onTabClick('mars')} borderDirection="bottom">
-        Mars
+      <TabNav
+        to="#"
+        onClick={() => onTabClick('mars')}
+        borderDirection="bottom"
+      >
+        MARS
       </TabNav>
-      <TabNav to="#" onClick={() => onTabClick('europa')} borderDirection="bottom">
-        Europa
+      <TabNav
+        to="#"
+        onClick={() => onTabClick('europa')}
+        borderDirection="bottom"
+      >
+        EUROPA
       </TabNav>
-      <TabNav to="#" onClick={() => onTabClick('titan')} borderDirection="bottom">
-        Titan
+      <TabNav
+        to="#"
+        onClick={() => onTabClick('titan')}
+        borderDirection="bottom"
+      >
+        TITAN
       </TabNav>
     </S.TabNavDestination>
   );

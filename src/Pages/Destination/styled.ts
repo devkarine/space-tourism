@@ -47,7 +47,11 @@ export const WrapperDestinations = styled.div`
 
 export const DestinationDescription = styled.p`
   padding-bottom: 40px;
+  font-family: ${({ theme }) => theme.fonts.family.tertiary};
+  font-size: ${({ theme }) => theme.fonts.size.text.small};
+  color: ${({ theme }) => theme.colors.secondary};
   border-bottom: 0.5px solid ${({ theme }) => theme.colors.neutral[500]};
+  line-height: 180%;
 `;
 
 export const Distance = styled.div`
@@ -58,6 +62,8 @@ export const Distance = styled.div`
   p {
     font-family: ${({ theme }) => theme.fonts.family.secondary};
     font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
+    color: ${({ theme }) => theme.colors.secondary};
+    letter-spacing: 2px;
   }
 
   span {

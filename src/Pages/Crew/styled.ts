@@ -50,23 +50,28 @@ export const WrapperCrew = styled.div`
 
 export const RoleCrew = styled.h3`
   font-size: ${({ theme }) => theme.fonts.size.header.small};
-  font-weight: lighter;
+  font-family: ${({ theme }) => theme.fonts.family.primary};
+  color: ${({ theme }) => theme.colors.neutral[500]};
+  font-weight: 400;
   height: 37px;
   margin: 24px 0;
 `;
 
 export const NameCrew = styled.h2`
   font-size: ${({ theme }) => theme.fonts.size.header.medium};
+  font-family: ${({ theme }) => theme.fonts.family.primary};
+  color: ${({ theme }) => theme.colors.light};
   height: 143px;
-  font-weight: lighter;
+  font-weight: 400;
   width: 539px;
-  line-height: 1;
 `;
 
 export const DescriptionCrew = styled.p`
   font-size: ${({ theme }) => theme.fonts.size.text.small};
   font-family: ${({ theme }) => theme.fonts.family.tertiary};
-  font-weight: lighter;
+  color: ${({ theme }) => theme.colors.secondary};
+  font-weight: 400;
+  line-height: 180%;
 `;
 
 export const PaginationWrapper = styled.div`

@@ -13,6 +13,7 @@ export const TabNav = styled(Link)<TabNavProps>`
   gap: 12px;
   font-family: ${({ theme }) => theme.fonts.family.secondary};
   font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
+  letter-spacing: 2px;
   color: ${({ theme }) => theme.colors.light};
   background-color: transparent;
   cursor: pointer;

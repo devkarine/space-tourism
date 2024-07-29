@@ -10,7 +10,7 @@ export const Container = styled.div`
   justify-content: space-between;
   padding-left: 64px;
   gap: 20px;
-  /* position: relative; */
+  position: relative;
 `;
 
 export const TabContainer = styled.div`
@@ -22,22 +22,24 @@ export const TabContainer = styled.div`
   background: ${({ theme }) => theme.colors.neutral[900]};
   backdrop-filter: blur(10px);
   padding: 0 64px;
-
-  span {
-    font-family: ${({ theme }) => theme.fonts.family.secondary};
-    font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
-    color: ${({ theme }) => theme.colors.light};
-  }
 `;
 
-// export const DetailHeader = styled.div`
-//   min-width: 510px;
-//   border: 0.5px solid #979797;
-//   position: absolute;
-//   z-index: 99999;
-//   margin-left: 100px;
+export const Position = styled.span`
+  font-family: ${({ theme }) => theme.fonts.family.secondary};
+  font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
+  color: ${({ theme }) => theme.colors.light};
+  font-weight: 700;
+`;
 
-//   @media (max-width: 768px) {
-//     display:  none;
-//   }
-// `;
+export const DetailHeader = styled.hr`
+  width: 60vw;
+  height: 1px;
+  border: 1px solid #979797;
+  opacity: 0.25;
+  position: absolute;
+  margin-left: 100px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;

@@ -18,7 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.light};
+    
   }
 
   button {

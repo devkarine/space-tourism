@@ -22,41 +22,39 @@ export const Header = () => {
   return (
     <S.Container>
       <Logo />
-      {/* <S.DetailHeader/> */}
+      <S.DetailHeader />
       {windowWidth > 768 ? (
         <S.TabContainer>
-          <TabNav  to="/home" borderDirection="bottom">
-            <span>00</span>HOME
+          <TabNav to="/home" borderDirection="bottom">
+            <S.Position>00</S.Position>HOME
           </TabNav>
 
           <TabNav to="/destination" borderDirection="bottom">
-            <span>01</span>DESTINATION
+            <S.Position>01</S.Position>DESTINATION
           </TabNav>
           <TabNav to="/crew" borderDirection="bottom">
-            <span>02</span>CREW
+            <S.Position>02</S.Position>CREW
           </TabNav>
           <TabNav to="/technology" borderDirection="bottom">
-            <span>03</span>TECHNOLOGY
+            <S.Position>03</S.Position>TECHNOLOGY
           </TabNav>
         </S.TabContainer>
       ) : (
         <ModalContent>
-          <TabNav to="/home"  borderDirection="right">
-            <span>00</span>HOME
+          <TabNav to="/home" borderDirection="right">
+            <S.Position>00</S.Position>HOME
           </TabNav>
-          <TabNav to="/destination"  borderDirection="right">
-            <span>01</span>DESTINATION
+          <TabNav to="/destination" borderDirection="right">
+            <S.Position>01</S.Position>DESTINATION
           </TabNav>
           <TabNav to="/crew" borderDirection="right">
-            <span>02</span>CREW
+            <S.Position>02</S.Position>CREW
           </TabNav>
           <TabNav to="/technology" borderDirection="right">
-            <span>03</span>TECHNOLOGY
+            <S.Position>03</S.Position>TECHNOLOGY
           </TabNav>
         </ModalContent>
       )}
     </S.Container>
   );
 };
-
-//TODO voltar e arrumar os DetailHeader

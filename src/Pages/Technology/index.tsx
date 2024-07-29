@@ -71,8 +71,8 @@ export const Technology = () => {
 
             <S.TechnologyContent>
               <h2>THE TERMINOLOGY…</h2>
-              <div>{technology.title.toLocaleUpperCase()}</div>
-              <div>{technology.description}</div>
+              <h3>{technology.title.toLocaleUpperCase()}</h3>
+              <p>{technology.description}</p>
             </S.TechnologyContent>
 
             <div>
