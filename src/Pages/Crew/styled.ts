@@ -36,6 +36,8 @@ export const MainContent = styled.div`
   @media (max-width: 930px) {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -44,8 +46,9 @@ export const WrapperCrew = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 180px;
+  padding: 5px;
   height: 631px;
-  width: 539px;
+  /* max-width: 539px; */
 `;
 
 export const RoleCrew = styled.h3`
@@ -63,7 +66,7 @@ export const NameCrew = styled.h2`
   color: ${({ theme }) => theme.colors.light};
   height: 143px;
   font-weight: 400;
-  width: 539px;
+  max-width: 500px;
   margin-bottom: 24px;
 `;
 
@@ -73,20 +76,25 @@ export const DescriptionCrew = styled.p`
   color: ${({ theme }) => theme.colors.secondary};
   font-weight: 400;
   line-height: 180%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: 930px) {
+    text-align: center;
+  }
 `;
 
 export const PaginationWrapper = styled.div`
   display: flex;
   margin: 20px 0;
   gap: 40px;
+
   @media (max-width: 930px) {
     justify-content: center;
   }
 `;
 
 export const ImgCrew = styled.div`
-  width: 539px;
-  height: 531px;
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
@@ -99,5 +107,20 @@ export const ImgCrew = styled.div`
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 70%, #0b0d17);
+  }
+
+  img {
+    width: 539px;
+    height: 636px;
+
+    @media (max-width: 1300px) {
+      width: 400px;
+      height: 469px;
+    }
+
+    @media (max-width: 768px) {
+      width: 300px;
+      height: 369px;
+    }
   }
 `;

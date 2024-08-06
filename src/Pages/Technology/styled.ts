@@ -33,26 +33,45 @@ export const Main = styled.div`
   align-items: center;
   justify-content: center;
   gap: 95px;
+  padding-bottom: 30px;
 
   @media (max-width: 900px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `;
 
 export const TechnologyContent = styled.div`
-  width: 490px;
+  max-width: 500px;
 
   h2 {
     font-size: ${({ theme }) => theme.fonts.size.header.small};
     font-family: ${({ theme }) => theme.fonts.family.primary};
     color: ${({ theme }) => theme.colors.neutral[500]};
     font-weight: 400;
+
+    @media (max-width: 768px) {
+      font-size: ${({ theme }) => theme.fonts.size.text.medium};
+      text-align: center;
+    }
+
+    @media (max-width: 375px) {
+      font-size: ${({ theme }) => theme.fonts.size.text.small};
+    }
   }
 
   h3 {
     font-size: ${({ theme }) => theme.fonts.size.header.medium};
     font-family: ${({ theme }) => theme.fonts.family.primary};
     color: ${({ theme }) => theme.colors.light};
+
+    @media (max-width: 768px) {
+      font-size: ${({ theme }) => theme.fonts.size.header.small};
+      text-align: center;
+    }
+
+    @media (max-width: 375px) {
+      font-size: ${({ theme }) => theme.fonts.size.text.medium};
+    }
   }
 
   p {
@@ -60,6 +79,11 @@ export const TechnologyContent = styled.div`
     font-family: ${({ theme }) => theme.fonts.family.tertiary};
     color: ${({ theme }) => theme.colors.secondary};
     line-height: 180%;
+
+    @media (max-width: 768px) {
+      font-size: ${({ theme }) => theme.fonts.size.text.extraSmall};
+      text-align: center;
+    }
   }
 `;
 
@@ -70,5 +94,14 @@ export const PaginationContent = styled.div`
 
   @media (max-width: 900px) {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const ImgTechnology = styled.div`
+  img {
+    width: 100%;
+    height: auto;
   }
 `;

@@ -35,8 +35,8 @@ export const PaginationContainer = styled.button<PaginationContainerProps>`
         
       `}
 
-  @media (max-width: 688px ) {
-    width: ${({ size }) => (size === 'small' ? '10px' : '56px')};
-    height: ${({ size }) => (size === 'small' ? '10px' : '56px')};
+  @media (max-width: 768px ) {
+    width: ${({ size }) => (size === 'small' ? '40px' : '56px')};
+    height: ${({ size }) => (size === 'small' ? '40px' : '56px')};
   }
 `;

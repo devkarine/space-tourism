@@ -26,6 +26,8 @@ export const MainContent = styled.div`
   @media (max-width: 930px) {
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -47,7 +49,7 @@ export const WrapperDestinations = styled.div`
 
 export const DestinationDescription = styled.p`
   padding-bottom: 40px;
-  height: 168px;
+  height: 250px;
   font-family: ${({ theme }) => theme.fonts.family.tertiary};
   font-size: ${({ theme }) => theme.fonts.size.text.small};
   color: ${({ theme }) => theme.colors.secondary};

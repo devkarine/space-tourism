@@ -15,32 +15,11 @@ interface TechnologyData {
 export const Technology = () => {
   const [selectedTechnology, setSelectedTechnology] = useState(0);
   const [technologys, setTechnologys] = useState<TechnologyData[]>([]);
-  const [imageSrc, setImageSrc] = useState<string>('');
 
   useEffect(() => {
     const technologyArray = Object.values(technologyData) as TechnologyData[];
     setTechnologys(technologyArray);
   }, []);
-
-  useEffect(() => {
-    const updateImageSrc = () => {
-      const width = window.innerWidth;
-      const imageKey = width <= 900 ? 'image_small' : 'image_large';
-      const technology = technologys[selectedTechnology];
-      if (technology) {
-        setImageSrc(technology[imageKey]);
-      }
-    };
-
-    updateImageSrc();
-
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-    mediaQuery.addEventListener('change', updateImageSrc);
-
-    return () => {
-      mediaQuery.removeEventListener('change', updateImageSrc);
-    };
-  }, [selectedTechnology, technologys]);
 
   const handleTabClick = (index: number) => {
     setSelectedTechnology(index);
@@ -75,9 +54,9 @@ export const Technology = () => {
               <p>{technology.description}</p>
             </S.TechnologyContent>
 
-            <div>
-              <img src={imageSrc} alt={technology.title} />
-            </div>
+            <S.ImgTechnology>
+              <img src={technology.image_large} alt={technology.title} />
+            </S.ImgTechnology>
           </S.Main>
         )}
       </S.WrapperTecnology>
